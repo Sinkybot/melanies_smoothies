@@ -47,3 +47,8 @@ if time_to_insert:
     success_stmt = "Your Smoothie is ordered, "+name_on_order+"!"
     #st.write(success_stmt)
     st.success(success_stmt, icon="✅")
+
+#New section to display fruityvice nutrition information
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+st.text(fruityvice_response)
